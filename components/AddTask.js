@@ -6,13 +6,13 @@ export default function AddTask({onAddTask}) {
 
     return (
         <View style={styles.container}>
-            <TextInput style={styles.text}
-                placeholder="type something"
+            <TextInput style={styles.input}
+                placeholder="type a new to-do here..."
                 value={input}
                 onChangeText={(text) => setInput(text)}
             >
             </TextInput>
-            <Button style={styles.text}
+            <Button style={styles.button}
                 title="add to-do"
                 onPress={() => {
                     if (input.trim() === "") return;
@@ -27,10 +27,18 @@ export default function AddTask({onAddTask}) {
 
 const styles = StyleSheet.create({
     container: {
-        height: '100%'
+        width: '100%'
     },
-    text: {
-      fontSize: 30,
+    input: {
+      fontSize: 20,
       width: '100%',
+      marginBottom: 10,
+      borderWidth: 1,
+      borderColor: '#000'
+    },
+    button: {
+        fontSize: 30,
+        width: '100%',
+        borderCurve: 10
     }
 });
