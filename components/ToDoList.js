@@ -25,7 +25,7 @@ export default function ToDoList({itemTitles}) {
 
     return (
         <View style={styles.container}>
-            <ScrollView contentContainerStyle={styles.items}>
+            <ScrollView style={styles.itemsView} contentContainerStyle={styles.items} persistentScrollbar={true}>
                 {
                     items.map(item => (
                         <View style={styles.item} key={item.id}>
@@ -54,13 +54,12 @@ const styles = StyleSheet.create({
       width: '100%',
       flexGrow: 1
     },
+    itemsView: {
+        marginBottom: 30
+    },
     items: {
-        flex: 1,
-        flexDirection: 'column',
-        justifyContent: 'flex-start',
         width: '100%',
-        flexGrow: 1,
-        marginBottom: 40,
+        paddingRight: 10
     },
     item: {
         flex: 0,

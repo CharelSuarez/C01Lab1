@@ -14,7 +14,8 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 60,
+    padding: 40,
+    paddingTop: 60,
     flex: 1,
     flexDirection: 'column',
     backgroundColor: '#fff',
@@ -26,6 +27,6 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 40,
     width: '100%',
-    marginBottom: 50
+    marginBottom: 40
   }
 });
